@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "quotes": [2, "single"]
+  },
+  "extends": "react-app",
+  "globals": {
+    "graphql": true
+  }
+}
