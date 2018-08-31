@@ -18,6 +18,14 @@ module.exports = {
       }
     },
     'gatsby-plugin-offline',
-    'gatsby-plugin-react-helmet'
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.itsadate.app',
+        sitemap: 'https://www.itsadate.app/sitemap.xml',
+        policy: [{ userAgent: '*', disallow: '/' }]
+      }
+    }
   ]
 };
