@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Favicon from './images/favicon.png';
 
 export default class HTML extends React.Component {
   render() {
@@ -12,6 +13,7 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <link rel="icon" href={Favicon} sizes="32x32" />
           <link
             href="https://fonts.googleapis.com/css?family=Poppins:300,400,500"
             rel="stylesheet"

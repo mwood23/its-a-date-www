@@ -41,9 +41,12 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
 }, {});
 
 export const theme = {
-  iadWhite: '#ffffff',
-  defaultFontColor: '#666667',
   defaultHeaderColor: '#333333',
   desktopHeaderHeight: '80px',
-  mobileHeaderHeight: '60px'
+  defaultFont: 'Poppins',
+  mobileHeaderHeight: '60px',
+  white: '#ffffff',
+  defaultFontColor: '#444444',
+  defaultHeaderFontColor: '#444444',
+  defaultTransition: 'all 0.2s linear'
 };

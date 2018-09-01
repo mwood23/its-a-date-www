@@ -1,33 +1,83 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
+import Logo from '../images/itsADateHorizontal.png';
+import styled from 'styled-components';
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
+const HeaderWrapper = styled.div`
+  height: ${props => props.theme.desktopHeaderHeight};
+  background-color: red;
+  background: ${props => (props.scrolled ? props.theme.white : 'transparent')};
+  box-shadow: ${props =>
+    props.scrolled ? '0 2px 4px 0 rgba(186, 186, 186, 0.5)' : 'none'};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 30;
+  padding: 0 3rem;
+  transition: ${props => props.theme.defaultTransition};
+`;
 
-export default Header
+const GetStartedButton = styled.button`
+  background-image: radial-gradient(circle at 50% 50%, #f75f67, #dd5c83);
+  box-shadow: 0 5px 10px -3px #de577e;
+  border: none;
+  height: 45px;
+  width: 200px;
+  border-radius: 40px;
+  color: ${props => props.theme.white};
+  font-size: 18px;
+  cursor: pointer;
+`;
+
+const HeaderImage = styled(Link)`
+  display: inline-block;
+  width: 220px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    font-family: 'object-fit: contain;';
+    margin: 0;
+    padding: 0.25rem 0;
+  }
+`;
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      mobileNavOpen: false,
+      scrolled: false
+    };
+  }
+
+  componentDidMount() {
+    document.addEventListener('scroll', () => {
+      const scrolled = window.scrollY > 30;
+      if (scrolled !== this.state.scrolled) {
+        this.setState({ scrolled });
+      }
+    });
+  }
+
+  render() {
+    const { siteTitle } = this.props;
+
+    return (
+      <HeaderWrapper scrolled={this.state.scrolled}>
+        <HeaderImage to="/">
+          <img src={Logo} alt="It's a Date logo" />
+        </HeaderImage>
+        <GetStartedButton>Get Started</GetStartedButton>
+      </HeaderWrapper>
+    );
+  }
+}
+
+export default Header;
