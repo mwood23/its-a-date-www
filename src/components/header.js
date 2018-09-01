@@ -32,6 +32,29 @@ const GetStartedButton = styled.button`
   color: ${props => props.theme.white};
   font-size: 18px;
   cursor: pointer;
+  z-index: 100;
+  position: relative;
+
+  &:before {
+    border-radius: inherit;
+    background-image: radial-gradient(circle at 50% 50%, #dd5c83, #f75f67);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    transition: opacity 0.45s;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
 `;
 
 const HeaderImage = styled(Link)`
@@ -68,8 +91,6 @@ class Header extends React.Component {
   }
 
   render() {
-    const { siteTitle } = this.props;
-
     return (
       <HeaderWrapper scrolled={this.state.scrolled}>
         <HeaderImage to="/">
