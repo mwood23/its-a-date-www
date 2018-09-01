@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Logo from '../images/itsADateHorizontal.png';
 import styled from 'styled-components';
+import { animateScroll } from 'react-scroll';
 
 const HeaderWrapper = styled.div`
   height: ${props => props.theme.desktopHeaderHeight};
@@ -74,7 +75,9 @@ class Header extends React.Component {
         <HeaderImage to="/">
           <img src={Logo} alt="It's a Date logo" />
         </HeaderImage>
-        <GetStartedButton>Get Started</GetStartedButton>
+        <GetStartedButton onClick={() => animateScroll.scrollToBottom()}>
+          Get Started
+        </GetStartedButton>
       </HeaderWrapper>
     );
   }

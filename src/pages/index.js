@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import Layout from '../components/layout';
 import Slider from 'react-slick';
 import Logo from '../images/itsADateHorizontalDark.png';
+import LogoStacked from '../images/itsADateLogoDark.png';
+import AppHome from '../images/appHome.png';
 
 import Date1 from '../images/bubble3.png';
 import Date2 from '../images/bubble1.png';
@@ -15,6 +17,34 @@ import Date5 from '../images/bubble5.png';
 import IconBlurb1 from '../images/iconBlurb1.png';
 import IconBlurb2 from '../images/iconBlurb2.png';
 import IconBlurb3 from '../images/iconBlurb3.png';
+
+import Facebook from '../images/facebookLogo.svg';
+import Twitter from '../images/twitterLogo.svg';
+import Instagram from '../images/instagramLogo.svg';
+import Medium from '../images/mediumLogo.svg';
+
+const SOCIAL_IMAGES = [
+  {
+    link: 'https://www.instagram.com/itsadatehq/',
+    image: Instagram,
+    alt: 'Instagram'
+  },
+  {
+    link: 'https://twitter.com/ItsADateHQ',
+    image: Twitter,
+    alt: 'Twitter'
+  },
+  {
+    link: 'https://www.facebook.com/Its-a-Date-1945410205759788/',
+    image: Facebook,
+    alt: 'Facebook'
+  },
+  {
+    link: 'https://medium.com/its-a-date',
+    image: Medium,
+    alt: 'Medium'
+  }
+];
 
 const SLIDES = [
   {
@@ -72,7 +102,8 @@ const Blurbs = [
 ];
 
 const HeroSection = styled.div`
-  background-image: url(${Hero});
+  background: url(${Hero}) no-repeat center center fixed;
+  background-size: cover;
   height: 74vh;
   width: 100%;
 `;
@@ -245,19 +276,258 @@ const AppShowcaseContainer = styled.div`
   background-image: linear-gradient(to bottom, #ffffff, #eafcfa);
   padding: 4rem;
 `;
-const AppDetails = styled.div``;
-const AppImage = styled.img``;
+
+const AppShowcaseWrapper = styled.div`
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+`;
+const AppDetails = styled.div`
+  width: 60%;
+  img {
+    object-fit: cover;
+    width: 40%;
+  }
+`;
+const AppImage = styled.img`
+  object-fit: contain;
+  padding: 0 3rem 0 5rem;
+  width: 40%;
+  margin-bottom: 0;
+`;
+
+const AppShowcaseLine1 = styled.p`
+  font-size: 28px;
+  line-height: 1.2;
+  color: #5e5e5e;
+  margin-bottom: 0.5rem;
+`;
+const AppShowcaseLine2 = styled.p`
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 1.2;
+  color: #5e5e5e;
+  margin-bottom: 4rem;
+`;
+
+const FillBar = styled.div`
+  background-image: radial-gradient(circle at 50% 0, #f75f67, #dd5c83);
+  height: 30px;
+  border-radius: 14px;
+  margin-bottom: 0.5rem;
+`;
+const FillBarText = styled.div`
+  color: #f65f68;
+  text-transform: uppercase;
+  text-align: center;
+`;
+
+const AccessRegistrationContainer = styled.div``;
 
 const AppShowcase = () => {
   return (
     <AppShowcaseContainer>
-      <AppDetails>
-        <p>in here</p>
-      </AppDetails>
-      <AppImage />
+      <AppShowcaseWrapper>
+        <AppDetails>
+          <img src={LogoStacked} alt="It's a Date logo" />
+          <AppShowcaseLine1>Now available in the DC area!</AppShowcaseLine1>
+          <AppShowcaseLine2>
+            Sign up to join other active singles and get early access to
+            exclusive events.
+          </AppShowcaseLine2>
+
+          <AccessRegistrationContainer>
+            <FillBar />
+            <FillBarText>Pre-access registration is full</FillBarText>
+          </AccessRegistrationContainer>
+        </AppDetails>
+        <AppImage src={AppHome} />
+      </AppShowcaseWrapper>
     </AppShowcaseContainer>
   );
 };
+
+const CallToActionContainer = styled.div`
+  background-image: radial-gradient(circle at 50% 50%, #58cdb7, #14938b);
+  padding: 4rem 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+const CallToActionWrapper = styled.div`
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 5rem;
+`;
+const CTAPowerStatement = styled.h2`
+  font-size: 52px;
+  text-align: center;
+  font-weight: 400;
+  color: white;
+`;
+const CTAText = styled.p`
+  font-weight: 300;
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+`;
+const CTAInputContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 50px;
+`;
+
+const CTAInput = styled.input`
+  height: 100%;
+  flex: 3;
+  border-radius: 4px;
+  border: none;
+  padding: 0 1rem;
+  color: #444444;
+`;
+const CTASubmit = styled.input`
+  margin-left: 10px;
+  height: 100%;
+  flex: 1;
+  border-radius: 4px;
+  background-color: #f05f6f;
+  color: white;
+  border: none;
+  font-weight: 300;
+  cursor: pointer;
+  transition: ${props => props.theme.defaultTransition};
+
+  &:hover {
+    background-color: #d74656;
+  }
+`;
+const Footer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: white;
+`;
+
+const LeftContainer = styled.div``;
+
+const Copyright = styled.p`
+  margin: 0;
+  color: white;
+`;
+
+const LinksContainer = styled.div`
+  display: flex;
+
+  span {
+    margin: 0 5px;
+    color: white;
+  }
+
+  a {
+    color: white;
+
+    &:hover {
+      color: white;
+    }
+  }
+`;
+
+const SocialIcons = styled.div`
+  display: flex;
+`;
+
+const SocialIcon = styled.div`
+  margin: 0 0.5rem;
+`;
+
+class CallToAction extends React.Component {
+  state = {
+    emailInput: ''
+  };
+
+  render() {
+    return (
+      <CallToActionContainer>
+        <CallToActionWrapper>
+          <CTAPowerStatement>Who will you meet?</CTAPowerStatement>
+          <CTAText>
+            Join our waitlist! More access slots will be available soon.
+          </CTAText>
+          <div id="mc_embed_signup">
+            <form
+              action="https://app.us19.list-manage.com/subscribe/post?u=76beb942e1dccbc60cde83f66&amp;id=c497c63cab"
+              method="post"
+              id="mc-embedded-subscribe-form"
+              name="mc-embedded-subscribe-form"
+              target="_blank"
+              noValidate
+            >
+              <CTAInputContainer id="mc_embed_signup_scroll">
+                <CTAInput
+                  type="email"
+                  value={this.state.emailInput}
+                  onChange={e => {
+                    this.setState({ emailInput: e.target.value });
+                  }}
+                  name="EMAIL"
+                  id="mce-EMAIL"
+                  placeholder="Enter email address"
+                  required
+                />
+                <div
+                  style={{ position: 'absolute', left: '-5000px' }}
+                  aria-hidden="true"
+                >
+                  <input
+                    type="text"
+                    name="b_76beb942e1dccbc60cde83f66_c497c63cab"
+                    tabIndex="-1"
+                    value=""
+                  />
+                </div>
+                <CTASubmit
+                  type="submit"
+                  value="Get on the waitlist"
+                  name="subscribe"
+                  id="mc-embedded-subscribe"
+                />
+              </CTAInputContainer>
+            </form>
+          </div>
+        </CallToActionWrapper>
+
+        <Footer>
+          <LeftContainer>
+            <Copyright> &copy; 2018 It's a Date, All Rights Reserved</Copyright>
+            <LinksContainer>
+              <a href="https://its-a-date.netlify.com/">Privacy Policy</a>
+              <span>|</span>
+              <a href="https://its-a-date.netlify.com/">Terms and Conditions</a>
+            </LinksContainer>
+          </LeftContainer>
+          <SocialIcons>
+            {SOCIAL_IMAGES.map(social => {
+              return (
+                <SocialIcon key={social.link}>
+                  <a
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={social.image} alt={social.alt} />
+                  </a>
+                </SocialIcon>
+              );
+            })}
+          </SocialIcons>
+        </Footer>
+      </CallToActionContainer>
+    );
+  }
+}
 
 const IndexPage = ({ data }) => {
   return (
@@ -272,6 +542,7 @@ const IndexPage = ({ data }) => {
       <DateSlider />
       <IconBlurbSection />
       <AppShowcase />
+      <CallToAction />
     </Layout>
   );
 };
