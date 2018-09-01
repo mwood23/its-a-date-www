@@ -47,7 +47,7 @@ const GetStartedButton = styled.button`
     opacity: 0;
     width: 100%;
     z-index: -100;
-    transition: opacity 0.45s;
+    transition: opacity 0.75s;
   }
 
   &:hover {
