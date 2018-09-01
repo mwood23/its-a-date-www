@@ -1,13 +1,12 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "its-a-date-www",
+  "description": "It's a Date Website",
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.6.0",
     "gatsby": "next",
     "gatsby-image": "^1.0.55",
-    "gatsby-plugin-google-analytics": "^1.0.31",
     "gatsby-plugin-google-tagmanager": "^1.0.19",
     "gatsby-plugin-manifest": "^2.0.2-rc.1",
     "gatsby-plugin-netlify": "^1.0.21",
@@ -30,9 +29,10 @@
     "typography": "^0.16.17"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "dating",
+    "relationships"
   ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -44,6 +44,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/mwood23/its-a-date-www"
   }
 }

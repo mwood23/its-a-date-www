@@ -4,7 +4,13 @@ module.exports = {
     description: 'The dating app that actually involves dates.'
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/src/pages`
+      }
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -26,6 +32,33 @@ module.exports = {
         sitemap: 'https://www.itsadate.app/sitemap.xml',
         policy: [{ userAgent: '*', disallow: '/' }]
       }
-    }
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-offline',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/utils/typography'
+      }
+    },
+    'gatsby-transformer-remark'
+
+    // {
+    //   resolve: 'gatsby-plugin-google-tagmanager',
+    //   options: {
+    //     id: 'YOUR_GOOGLE_TAGMANAGER_ID',
+
+    //     // Include GTM in development.
+    //     // Defaults to false meaning GTM will only be loaded in production.
+    //     includeInDevelopment: false,
+
+    //     // Specify optional GTM environment details.
+    //     gtmAuth: 'YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING',
+    //     gtmPreview: 'YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME'
+    //   }
+    // }
   ]
 };
