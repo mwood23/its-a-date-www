@@ -9,9 +9,7 @@ import Header from './header';
 import './layout.css';
 import { theme } from '../utils/theme';
 
-const ContentWrapper = styled.div`
-  padding-top: ${props => props.theme.desktopHeaderHeight};
-`;
+const ContentWrapper = styled.div``;
 
 const Layout = ({ children }) => (
   <StaticQuery
