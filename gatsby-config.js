@@ -38,7 +38,7 @@ module.exports = {
       options: {
         host: 'https://www.itsadate.app',
         sitemap: 'https://www.itsadate.app/sitemap.xml',
-        policy: [{ userAgent: '*', disallow: '/' }]
+        policy: [{ userAgent: '*', allow: '/' }]
       }
     },
     'gatsby-plugin-sharp',
