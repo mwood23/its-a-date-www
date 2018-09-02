@@ -109,7 +109,7 @@ const HeroSection = styled.div`
   width: 100%;
 
   ${media.forSmallOnly`
-    background: url(${Hero}) no-repeat 30% center fixed;
+    background: url(${Hero}) no-repeat 30% 0 fixed;
   `};
 `;
 
