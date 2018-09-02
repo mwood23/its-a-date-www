@@ -23,7 +23,7 @@ const HeaderWrapper = styled.div`
 
   ${media.forSmallOnly`
     height: ${props => props.theme.mobileHeaderHeight};
-    padding: 0 1.5rem;
+    padding: 0 1rem;
   `};
 `;
 
@@ -41,9 +41,9 @@ const GetStartedButton = styled.button`
   position: relative;
 
   ${media.forSmallOnly`
-    height: 35px;
-    font-size: 16px;
-    width: 140px;
+    height: 30px;
+    font-size: 14px;
+    width: 130px;
   `};
 
   &:before {
@@ -73,7 +73,10 @@ const HeaderImage = styled(Link)`
   width: 220px;
 
   ${media.forSmallOnly`
-    width: 200px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   `};
 
   img {
