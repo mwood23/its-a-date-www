@@ -3,10 +3,10 @@ import { Link } from 'gatsby';
 import Logo from '../images/itsADateHorizontal.png';
 import styled from 'styled-components';
 import { animateScroll } from 'react-scroll';
+import { media } from '../utils/theme';
 
 const HeaderWrapper = styled.div`
   height: ${props => props.theme.desktopHeaderHeight};
-  background-color: red;
   background: ${props => (props.scrolled ? props.theme.white : 'transparent')};
   box-shadow: ${props =>
     props.scrolled ? '0 2px 4px 0 rgba(186, 186, 186, 0.5)' : 'none'};
@@ -20,6 +20,11 @@ const HeaderWrapper = styled.div`
   z-index: 30;
   padding: 0 3rem;
   transition: ${props => props.theme.defaultTransition};
+
+  ${media.forSmallOnly`
+    height: ${props => props.theme.mobileHeaderHeight};
+    padding: 0 1.5rem;
+  `};
 `;
 
 const GetStartedButton = styled.button`
@@ -34,6 +39,12 @@ const GetStartedButton = styled.button`
   cursor: pointer;
   z-index: 100;
   position: relative;
+
+  ${media.forSmallOnly`
+    height: 35px;
+    font-size: 16px;
+    width: 140px;
+  `};
 
   &:before {
     border-radius: inherit;
@@ -60,6 +71,10 @@ const GetStartedButton = styled.button`
 const HeaderImage = styled(Link)`
   display: inline-block;
   width: 220px;
+
+  ${media.forSmallOnly`
+    width: 200px;
+  `};
 
   img {
     height: 100%;
