@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Logo from '../images/itsADateHorizontal.png';
+import LogoDark from '../images/itsADateHorizontalDark.png';
 import styled from 'styled-components';
 import { animateScroll } from 'react-scroll';
 import { media } from '../utils/theme';
@@ -101,7 +102,8 @@ class Header extends React.Component {
 
   componentDidMount() {
     document.addEventListener('scroll', () => {
-      const scrolled = window.scrollY > 30;
+      const scrolled = window.scrollY > 200;
+
       if (scrolled !== this.state.scrolled) {
         this.setState({ scrolled });
       }
@@ -109,10 +111,14 @@ class Header extends React.Component {
   }
 
   render() {
+    let logo = Logo;
+    if (this.state.scrolled) {
+      logo = LogoDark;
+    }
     return (
       <HeaderWrapper scrolled={this.state.scrolled}>
         <HeaderImage to="/">
-          <img src={Logo} alt="It's a Date logo" />
+          <img src={logo} alt="It's a Date logo" />
         </HeaderImage>
         <GetStartedButton onClick={() => animateScroll.scrollToBottom()}>
           Get Started

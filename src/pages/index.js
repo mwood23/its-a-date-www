@@ -57,16 +57,16 @@ const SLIDES = [
     date: 'Drinks?'
   },
   {
+    slideImage: Date5,
+    date: 'Concert?'
+  },
+  {
     slideImage: Date3,
     date: 'Brunch?'
   },
   {
     slideImage: Date2,
     date: 'Exploring?'
-  },
-  {
-    slideImage: Date5,
-    date: 'Lunch?'
   }
 ];
 
@@ -98,14 +98,15 @@ const Blurbs = [
     image: IconBlurb3,
     header: 'Get Going!',
     text:
-      'Chat with your match, discuss the details, and meet up to have a great time.'
+      'Chat with your match, discuss the details, and meet up to have a great time.',
+    imageClass: 'circle-image'
   }
 ];
 
 const HeroSection = styled.div`
   background: url(${Hero}) no-repeat center center fixed;
   background-size: cover;
-  height: 74vh;
+  height: 90vh;
   width: 100%;
 
   ${media.forSmallOnly`
@@ -174,7 +175,7 @@ const DateSliderContainer = styled.div`
 `;
 
 const CustomSlideContainer = styled.div`
-  height: 650px;
+  height: 550px;
   display: flex;
   max-width: 1140px;
   margin: 0 auto;
@@ -222,22 +223,24 @@ const CustomSlideSecondaryContent = styled.div`
 
 const CustomSlideText = styled.p`
   color: #23baa4;
-  font-size: 78px;
+  font-size: 68px;
   line-height: 1.2;
 
   ${media.forSmallMediumOnly`
-    font-size: 62px;
+    font-size: 60px;
   `};
 
   ${media.forSmallOnly`
-    font-size: 58px;
+    font-size: 50px;
   `};
 `;
 const CustomSlideSecondaryImage = styled.img`
   object-fit: contain;
+  padding-right: 5rem;
 
   ${media.forSmallOnly`
     margin: 0;
+    padding: 0;
   `};
 `;
 
@@ -246,7 +249,7 @@ const BottomSliderText = styled.p`
   text-align: center;
   margin: 0;
   font-size: 24px;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
 
   ${media.forSmallOnly`
     padding: 0 1rem 1rem;
@@ -359,7 +362,7 @@ const IBImage = styled.img``;
 const IBHeader = styled.h3`
   color: white;
   font-family: 'Poppins';
-  font-weight: 300;
+  font-weight: 400;
   font-size: 24px;
   text-align: center;
 
@@ -386,13 +389,15 @@ const IBContent = styled.p`
 const IconBlurbSection = () => {
   return (
     <IconBlurbContainer>
-      <Header>
-        Match with like-minded individuals who share common interests!
-      </Header>
+      <Header>How does it work?</Header>
       <IconBlurbWrapper>
         {Blurbs.map(blurb => (
           <IconBlurb key={blurb.header}>
-            <IBImage src={blurb.image} alt={blurb.header} />
+            <IBImage
+              src={blurb.image}
+              alt={blurb.header}
+              className={blurb.imageClass}
+            />
             <IBHeader>{blurb.header}</IBHeader>
             <IBContent>{blurb.text}</IBContent>
           </IconBlurb>
