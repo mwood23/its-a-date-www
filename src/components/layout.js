@@ -28,8 +28,12 @@ const Layout = ({ children }) => (
           <Helmet
             title={data.site.siteMetadata.title}
             meta={[
-              { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' }
+              {
+                name: 'description',
+                content:
+                  "It's a Date is an activity based dating app that focuses on bringing people of similar interests together. Coming soon to Washington, D.C.!" //eslint-disable-line
+              },
+              { name: 'keywords', content: 'dating, relationships, actities' }
             ]}
           >
             <html lang="en" />
