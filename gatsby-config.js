@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "It's a Date", // eslint-disable-line
     description: 'The dating app that actually involves dates.',
-    siteUrl: 'https://itsadate.app'
+    siteUrl: 'https://www.itsadate.app'
   },
   plugins: [
     {

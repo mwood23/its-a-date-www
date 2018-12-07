@@ -112,17 +112,23 @@ class Header extends React.Component {
 
   render() {
     let logo = Logo;
-    if (this.state.scrolled) {
+    const onSecondaryPage =
+      typeof window !== 'undefined' && window.location.pathname !== '/';
+    if (this.state.scrolled || onSecondaryPage) {
       logo = LogoDark;
     }
     return (
-      <HeaderWrapper scrolled={this.state.scrolled}>
+      <HeaderWrapper scrolled={this.state.scrolled || onSecondaryPage}>
         <HeaderImage to="/">
           <img src={logo} alt="It's a Date logo" />
         </HeaderImage>
-        <GetStartedButton onClick={() => animateScroll.scrollToBottom()}>
-          Get Started
-        </GetStartedButton>
+        {onSecondaryPage ? (
+          <div />
+        ) : (
+          <GetStartedButton onClick={() => animateScroll.scrollToBottom()}>
+            Get Started
+          </GetStartedButton>
+        )}
       </HeaderWrapper>
     );
   }

@@ -106,7 +106,7 @@ const Blurbs = [
 const HeroSection = styled.div`
   background: url(${Hero}) no-repeat center center fixed;
   background-size: cover;
-  height: 90vh;
+  height: 80vh;
   width: 100%;
 
   ${media.forSmallOnly`
