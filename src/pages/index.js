@@ -7,6 +7,7 @@ import Slider from 'react-slick';
 import Logo from '../images/itsADateHorizontalDark.png';
 import LogoStacked from '../images/itsADateLogoDark.png';
 import AppHome from '../images/appHome.png';
+import { Link } from 'gatsby';
 
 import Date1 from '../images/bubble3.png';
 import Date2 from '../images/bubble1.png';
@@ -108,8 +109,10 @@ const HeroSection = styled.div`
   background-size: cover;
   height: 80vh;
   width: 100%;
+  position: relative;
 
   ${media.forSmallOnly`
+    height: 95vh;
     background: url(${Hero}) no-repeat 30% 0 fixed;
   `};
 `;
@@ -793,9 +796,9 @@ class CallToAction extends React.Component {
           <LeftContainer>
             <Copyright> &copy; 2018 It's a Date, All Rights Reserved</Copyright>
             <LinksContainer>
-              <a href="https://its-a-date.netlify.com/">Privacy Policy</a>
+              <Link to="/privacy-policy">Privacy Policy</Link>
               <span>|</span>
-              <a href="https://its-a-date.netlify.com/">Terms and Conditions</a>
+              <Link to="/terms-and-conditions">Terms and Conditions</Link>
             </LinksContainer>
           </LeftContainer>
           <SocialIcons>
