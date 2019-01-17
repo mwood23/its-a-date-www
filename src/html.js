@@ -29,6 +29,25 @@ export default class HTML extends React.Component {
             type="text/css"
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
           />
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+  (function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
+    {a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
+    a.queue=[];var s='script';r=t.createElement(s);r.async=!0;
+    r.src=n;var u=t.getElementsByTagName(s)[0];
+    u.parentNode.insertBefore(r,u);})(window,document,
+    'https://sc-static.net/scevent.min.js');
+
+    snaptr('init', 'ea39146a-823d-43bc-be08-ed315da1b4dd', {
+    'user_email': '__INSERT_USER_EMAIL__'
+    });
+
+    snaptr('track', 'PAGE_VIEW');
+  `
+            }}
+          />
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
