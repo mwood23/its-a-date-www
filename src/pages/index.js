@@ -118,42 +118,49 @@ const HeroSection = styled.div`
 `;
 
 const PowerStatementSection = styled.div`
-  height: 420px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-image: radial-gradient(circle at 50% 50%, #58cdb7, #14938b);
-  padding: 0 3rem;
+  padding: 5rem 3rem;
   line-height: 1.2;
 
-  ${media.forSmallMediumOnly`
-    height: 390px;
-  `};
-
   ${media.forSmallOnly`
-    padding: 0 1.5rem;
-    height: 360px;
+    padding: 3rem 10px;
   `};
+`;
+
+const ResponsiveVideo = styled.div`
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+
+  iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
 `;
 
 const PowerStatementTop = styled.p`
   color: white;
   font-size: 48px;
   text-align: center;
-  margin-bottom: 3rem;
+  margin: 3rem 0;
 
   ${media.forSmallMediumOnly`
     font-size: 42px;
   `};
 
   ${media.forSmallOnly`
-  font-size: 36px;
+    font-size: 36px;
   `};
 `;
 
 const PowerStatementImage = styled.img`
   object-fit: cover;
+  display: block;
+  margin: 0 auto;
 
   ${media.forSmallMediumOnly`
     width: 50%;
@@ -827,6 +834,18 @@ const IndexPage = ({ data }) => {
     <Layout>
       <HeroSection />
       <PowerStatementSection>
+        <div style={{ margin: '0 auto', maxWidth: '800px' }}>
+          <ResponsiveVideo>
+            <iframe
+              src="https://player.vimeo.com/video/311800634"
+              title="launchVideo"
+              width="853"
+              height="505"
+              frameBorder="0"
+              allowFullScreen
+            />
+          </ResponsiveVideo>
+        </div>
         <PowerStatementTop>
           The dating app that actually involves
         </PowerStatementTop>
