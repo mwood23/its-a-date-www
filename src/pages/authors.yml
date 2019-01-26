@@ -1,3 +1,4 @@
-- id: Marcus
-  about: hello
-  image: hello
+author:
+  - about: test
+    name: test
+    thumbnail: /img/profile.jpeg
