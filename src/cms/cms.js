@@ -4,13 +4,13 @@ import BlogPostPreview from './preview-templates/BlogPostPreview';
 
 CMS.registerEditorComponent({
   // Internal id of the component
-  id: 'youtube',
+  id: 'vimeo',
   // Visible label
-  label: 'Youtube',
+  label: 'Vimeo',
   // Fields the user need to fill out when adding an instance of the component
-  fields: [{ name: 'id', label: 'Youtube Video ID', widget: 'string' }],
+  fields: [{ name: 'id', label: 'Vimeo Video ID', widget: 'string' }],
   // Pattern to identify a block as being an instance of this component
-  pattern: /^youtube (\S+)$/,
+  pattern: /^vimeo (\S+)$/,
   // Function to extract data elements from the regexp match
   fromBlock: function(match) {
     return {
@@ -19,15 +19,19 @@ CMS.registerEditorComponent({
   },
   // Function to create a text block from an instance of this component
   toBlock: function(obj) {
-    return '<iframe width="560" height="315" src="https://www.youtube.com/embed/hx7QS7cyqLo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    return `<div style="overflow: hidden;padding-bottom: 56.25%;position: relative;height: 0;"><iframe src="https://player.vimeo.com/video/${
+      obj.id
+    }" style="left: 0;top: 0;height: 100%;width: 100%;
+    position: absolute;" width="853" height="505" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>`;
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
   toPreview: function(obj) {
     return (
-      '<img src="http://img.youtube.com/vi/' +
-      obj.id +
-      '/maxresdefault.jpg" alt="Youtube Video"/>'
+      `<div style="overflow: hidden;padding-bottom: 56.25%;position: relative;height: 0;"><iframe src="https://player.vimeo.com/video/${
+      obj.id
+    }" style="left: 0;top: 0;height: 100%;width: 100%;
+    position: absolute;" width="853" height="505" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>`;
     );
   }
 });
