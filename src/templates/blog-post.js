@@ -1,10 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import kebabCase from 'lodash.kebabcase';
 import Helmet from 'react-helmet';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Content, { HTMLContent } from '../components/content';
+import { PageWrapper, Container, CallToActionFooter } from '../components/common';
+import styled from 'styled-components'
+
+const AuthorBlockContainer = styled.div`
+display: flex;
+align-items: center;
+margin-bottom: 2rem;
+
+  img {
+    border-radius: 50%;
+    object-fit: contain;
+    height: 50px;
+    width: 50px;
+    margin: 0;
+  }
+
+  > div {
+    margin-left: 1rem;
+
+    p {
+      margin: 0;
+      color: #959595;
+
+      &:last-child {
+        font-size: .9rem;
+      }
+    }
+  }
+`
+
+const AuthorBlock = ({author}) => {
+  return <AuthorBlockContainer>
+<img src={author.thumbnail} />
+<div>
+  <p>{author.id}</p>
+  <p>{author.about}</p>
+</div>
+  </AuthorBlockContainer>
+}
 
 export const BlogPostTemplate = ({
   content,
@@ -12,36 +50,33 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
-  helmet
+  helmet,
+  author
 }) => {
   const PostContent = contentComponent || Content;
 
+  console.log(author)
+
   return (
-    <section className="section">
+    <section style={{marginBottom: '2rem'}}>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: '4rem' }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + 'tag'}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
+      <h1>
+        {title}
+      </h1>
+      <AuthorBlock author={author} />
+      <PostContent content={content} />
+      {/* {tags && tags.length ? (
+        <div style={{ marginTop: '4rem' }}>
+          <h4>Tags</h4>
+          <ul className="taglist">
+            {tags.map(tag => (
+              <li key={tag + 'tag'}>
+                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
+      ) : null} */}
     </section>
   );
 };
@@ -59,22 +94,28 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <BlogPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-      />
+      <PageWrapper style={{marginTop: '3rem'}}>
+      <Container>
+        <BlogPostTemplate
+          content={post.html}
+          contentComponent={HTMLContent}
+          description={post.frontmatter.description}
+          helmet={
+            <Helmet titleTemplate="%s | Blog">
+              <title>{`${post.frontmatter.title}`}</title>
+              <meta
+                name="description"
+                content={`${post.frontmatter.description}`}
+              />
+            </Helmet>
+          }
+          tags={post.frontmatter.tags}
+          title={post.frontmatter.title}
+          author={post.frontmatter.author}
+        />
+      </Container>
+      </PageWrapper>
+      <CallToActionFooter />
     </Layout>
   );
 };
