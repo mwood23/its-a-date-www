@@ -19,6 +19,8 @@ We believe shared experiences are the core of strong relationships. In a perfect
 * It’s time for the date! You’ve spent the last few days creating potential outcomes in your head based on the small amount of judgment you could conjure up via social media stalking. You’re excited to really get to know the person, but they picked a restaurant with a genre of food you don’t really like, so you awkwardly order more drinks to satisfy your hunger. 
 * You talk about work, your friends, and even some shared hobbies. You end the night on good terms – maybe you’ll go out again, maybe you won’t – but overall, you’re tired and hungry and ready to get back on the app to start messaging a new match. Que a repeat cycle. 
 
+youtube hx7QS7cyqLo
+
 Does this sound familiar? We think we have created a perfect world solution for this nasty cycle. What better way to jump into the dating scene than through a platform that allows you to take control of your dating life? You set the details of your date, and immediately start matching with others interested in the same activities. You choose activities that sound fun to you, and you choose a person to share that date with from a group of interested matches.  So now, your dates go more like this:
 
 * You log into It’s a Date and browse through a variety of featured and custom dates, before choosing the perfect one for you. This time around, it’s a movie night at Chinatown Park!
