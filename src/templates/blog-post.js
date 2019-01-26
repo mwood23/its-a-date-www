@@ -4,13 +4,17 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Content, { HTMLContent } from '../components/content';
-import { PageWrapper, Container, CallToActionFooter } from '../components/common';
-import styled from 'styled-components'
+import {
+  PageWrapper,
+  Container,
+  CallToActionFooter
+} from '../components/common';
+import styled from 'styled-components';
 
 const AuthorBlockContainer = styled.div`
-display: flex;
-align-items: center;
-margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
 
   img {
     border-radius: 50%;
@@ -28,21 +32,23 @@ margin-bottom: 2rem;
       color: #959595;
 
       &:last-child {
-        font-size: .9rem;
+        font-size: 0.9rem;
       }
     }
   }
-`
+`;
 
-const AuthorBlock = ({author}) => {
-  return <AuthorBlockContainer>
-<img src={author.thumbnail} />
-<div>
-  <p>{author.id}</p>
-  <p>{author.about}</p>
-</div>
-  </AuthorBlockContainer>
-}
+const AuthorBlock = ({ author }) => {
+  return (
+    <AuthorBlockContainer>
+      <img src={author.thumbnail} alt="author" />
+      <div>
+        <p>{author.id}</p>
+        <p>{author.about}</p>
+      </div>
+    </AuthorBlockContainer>
+  );
+};
 
 export const BlogPostTemplate = ({
   content,
@@ -55,15 +61,14 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content;
 
-  console.log(author)
+  console.log(author);
 
   return (
-    <section style={{marginBottom: '2rem'}}>
+    <section style={{ marginBottom: '2rem' }}>
       {helmet || ''}
-      <h1>
-        {title}
-      </h1>
-      <AuthorBlock author={author} />
+      <h1>{title}</h1>
+      {author ? <AuthorBlock author={author} /> : null}
+
       <PostContent content={content} />
       {/* {tags && tags.length ? (
         <div style={{ marginTop: '4rem' }}>
@@ -94,26 +99,26 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <PageWrapper style={{marginTop: '3rem'}}>
-      <Container>
-        <BlogPostTemplate
-          content={post.html}
-          contentComponent={HTMLContent}
-          description={post.frontmatter.description}
-          helmet={
-            <Helmet titleTemplate="%s | Blog">
-              <title>{`${post.frontmatter.title}`}</title>
-              <meta
-                name="description"
-                content={`${post.frontmatter.description}`}
-              />
-            </Helmet>
-          }
-          tags={post.frontmatter.tags}
-          title={post.frontmatter.title}
-          author={post.frontmatter.author}
-        />
-      </Container>
+      <PageWrapper style={{ marginTop: '3rem' }}>
+        <Container>
+          <BlogPostTemplate
+            content={post.html}
+            contentComponent={HTMLContent}
+            description={post.frontmatter.description}
+            helmet={
+              <Helmet titleTemplate="%s | Blog">
+                <title>{`${post.frontmatter.title}`}</title>
+                <meta
+                  name="description"
+                  content={`${post.frontmatter.description}`}
+                />
+              </Helmet>
+            }
+            tags={post.frontmatter.tags}
+            title={post.frontmatter.title}
+            author={post.frontmatter.author}
+          />
+        </Container>
       </PageWrapper>
       <CallToActionFooter />
     </Layout>
