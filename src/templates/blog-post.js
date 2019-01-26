@@ -61,8 +61,6 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content;
 
-  console.log(author);
-
   return (
     <section style={{ marginBottom: '2rem' }}>
       {helmet || ''}
@@ -96,6 +94,8 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
+
+  console.log(post);
 
   return (
     <Layout>
