@@ -25,8 +25,8 @@ collections:
           label: 'Post Author',
           name: 'author',
           widget: 'relation',
-          collection: 'authors',
-          searchFields: ['name'],
+          collection: 'settings',
+          searchFields: ['authors'],
           valueField: 'name',
         }
       - { label: 'Description', name: 'description', widget: 'text' }
