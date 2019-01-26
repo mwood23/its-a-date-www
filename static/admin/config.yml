@@ -37,7 +37,7 @@ collections:
     files:
       - name: 'authors'
         label: 'Authors'
-        file: 'data/authors.yml'
+        file: 'src/data/authors.yml'
         extension: 'yml'
         widget: 'list'
         fields:
