@@ -29,7 +29,7 @@ const Blog = ({ data }) => {
   console.log(posts);
   return (
     <Layout>
-      <PageWrapper style={{ marginTop: '1rem' }}>
+      <PageWrapper style={{ marginTop: '3rem' }}>
         <Container>
           <h1>Blog</h1>
           <p>

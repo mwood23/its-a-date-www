@@ -4,7 +4,7 @@ import { PageWrapper, Container } from '../components/common';
 
 const PrivacyPolicy = () => (
   <Layout>
-    <PageWrapper style={{ marginTop: '1rem' }}>
+    <PageWrapper style={{ marginTop: '3rem' }}>
       <Container>
         <h1>Terms and Conditions</h1>
         <p>
