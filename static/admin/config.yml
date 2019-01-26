@@ -32,20 +32,17 @@ collections:
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Tags', name: 'tags', widget: 'list' }
-  - name: 'authors'
-    label: 'Authors'
-    folder: 'src/pages/authors'
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - {
-          label: 'Template Key',
-          name: 'templateKey',
-          widget: 'hidden',
-          default: 'authors',
-        }
-      - { label: 'Name', name: 'name', widget: 'string' }
-      - label: 'Profile Image'
-        name: 'thumbnail'
-        widget: 'image'
-      - { label: 'About', name: 'about', widget: 'text' }
+  - label: 'Settings'
+    name: 'settings'
+    files:
+      - name: 'authors'
+        label: 'Authors'
+        file: 'data/authors.yml'
+        extension: 'yml'
+        widget: 'list'
+        fields:
+          - { label: 'Name', name: 'name', widget: 'string' }
+          - label: 'Profile Image'
+            name: 'thumbnail'
+            widget: 'image'
+          - { label: 'About', name: 'about', widget: 'text' }
