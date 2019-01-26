@@ -97,6 +97,14 @@ export const pageQuery = graphql`
         title
         description
         tags
+        author {
+          id
+          about
+          thumbnail
+        }
+      }
+      fields {
+        slug
       }
     }
   }

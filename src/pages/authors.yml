@@ -1,4 +1,3 @@
-author:
-  - about: test
-    name: test
-    thumbnail: /img/profile.jpeg
+- id: Marcus Wood
+  about: Founder of It's a Date. Web apps, good vibes, and adventure
+  thumbnail: /img/profile.jpeg

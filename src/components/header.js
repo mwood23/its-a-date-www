@@ -6,6 +6,24 @@ import styled from 'styled-components';
 import { animateScroll } from 'react-scroll';
 import { media } from '../utils/theme';
 
+const PrimaryNavContainer = styled.div`
+  a {
+    color: ${props => (
+        props.scrolled ? props.theme.defaultFontColor : props.theme.white
+      )};
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+`;
+
+const PrimaryNav = ({ scrolled }) => {
+  return (
+    <PrimaryNavContainer scrolled={scrolled}>
+      <Link to="/blog">Blog</Link>
+    </PrimaryNavContainer>
+  );
+};
+
 const HeaderWrapper = styled.div`
   height: ${props => props.theme.desktopHeaderHeight};
   background: ${props => (props.scrolled ? props.theme.white : 'transparent')};
@@ -40,6 +58,7 @@ const GetStartedButton = styled.button`
   cursor: pointer;
   z-index: 100;
   position: relative;
+  margin-left: 1.5rem;
 
   ${media.forSmallOnly`
     height: 30px;
@@ -117,17 +136,27 @@ class Header extends React.Component {
     if (this.state.scrolled || onSecondaryPage) {
       logo = LogoDark;
     }
+    const scrolledStyle = this.state.scrolled || onSecondaryPage;
     return (
-      <HeaderWrapper scrolled={this.state.scrolled || onSecondaryPage}>
+      <HeaderWrapper scrolled={scrolledStyle}>
         <HeaderImage to="/">
           <img src={logo} alt="It's a Date logo" />
         </HeaderImage>
         {onSecondaryPage ? (
-          <div />
+          <PrimaryNav scrolled={scrolledStyle} />
         ) : (
-          <GetStartedButton onClick={() => animateScroll.scrollToBottom()}>
-            Get Started
-          </GetStartedButton>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+          >
+            <PrimaryNav scrolled={scrolledStyle} />
+            <GetStartedButton onClick={() => animateScroll.scrollToBottom()}>
+              Get Started
+            </GetStartedButton>
+          </div>
         )}
       </HeaderWrapper>
     );

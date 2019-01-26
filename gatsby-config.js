@@ -5,7 +5,7 @@ module.exports = {
     siteUrl: 'https://www.itsadate.app'
   },
   mapping: {
-    'MarkdownRemark.frontmatter.author': 'AuthorYaml'
+    'MarkdownRemark.frontmatter.author': 'AuthorsYaml'
   },
   plugins: [
     {
