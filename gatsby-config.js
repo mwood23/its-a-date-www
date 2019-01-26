@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: "It's a Date", // eslint-disable-line
+    title: "It's a Date - Activity Dating", // eslint-disable-line
     description: 'The dating app that actually involves dates.',
     siteUrl: 'https://www.itsadate.app'
+  },
+  mapping: {
+    'MarkdownRemark.frontmatter.author': 'AuthorYaml'
   },
   plugins: [
     {
@@ -51,6 +54,7 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-transformer-yaml',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',

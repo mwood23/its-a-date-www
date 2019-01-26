@@ -32,15 +32,21 @@ collections:
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Tags', name: 'tags', widget: 'list' }
-  - name: 'authors'
-    label: 'Authors'
-    folder: 'src/pages/authors'
-    create: true
-    identifier_field: name
-    slug: '{{slug}}'
-    fields:
-      - { label: 'Name', name: 'name', widget: 'string' }
-      - { label: 'About', name: 'about', widget: 'string' }
-      - label: 'Profile Image'
-        name: 'thumbnail'
-        widget: 'image'
+  - label: 'Settings'
+    name: 'settings'
+    files:
+      - name: 'authors'
+        label: 'Authors'
+        file: 'src/pages/authors.yml'
+        extension: 'yml'
+        widget: 'list'
+        fields:
+          - label: 'Author'
+            name: 'author'
+            widget: 'list'
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'About', name: 'about', widget: 'string' }
+              - label: 'Profile Image'
+                name: 'thumbnail'
+                widget: 'image'
