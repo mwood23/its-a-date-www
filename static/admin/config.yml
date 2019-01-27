@@ -2,19 +2,21 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: static/img
-public_folder: /img
-publish_mode: editorial_workflow
-
 media_library:
-  name: It's a Date Assets
+  name: cloudinary
   config:
     cloud_name: itsadateapp
     api_key: 632918356145438
+public_folder: /img
+publish_mode: editorial_workflow
 
 # field
-# fields:
-#   - { name: image, widget: image, media_library: { output_filename_only: false } }
+fields:
+  - {
+      name: image,
+      widget: image,
+      media_library: { output_filename_only: false },
+    }
 
 collections:
   - name: 'blog'
@@ -30,7 +32,8 @@ collections:
           default: 'blog-post',
         }
       - {
-          name: Hero Image,
+          label: Hero Image,
+          name: heroImage,
           widget: image,
           media_library: { output_filename_only: false },
         }
