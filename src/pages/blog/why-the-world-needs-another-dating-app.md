@@ -12,11 +12,11 @@ tags:
 ---
 ![happy couple in Washington DC](/img/hero2-1-.jpg)
 
+![](https://res.cloudinary.com/itsadateapp/image/upload/v1548615512/hero2-1-.jpg)
+
 Making conversation through a text message is risky. Trying to agree on a fun date is complicated. Dating in general can be hard. We get that. So, we’re here to take the dating app world to a new level, and to take any uncertainty out of your dating equation. 
 
 youtube hx7QS7cyqLo
-
-
 
 vimeo 311800634
 
