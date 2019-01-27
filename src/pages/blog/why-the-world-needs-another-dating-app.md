@@ -1,7 +1,6 @@
 ---
 templateKey: blog-post
-heroImage: >-
-  https://res.cloudinary.com/itsadateapp/image/upload/v1548615462/dx6qqdicx8vbqwxcymub.png
+heroImage: 'https://res.cloudinary.com/itsadateapp/image/upload/v1548615512/hero2-1-.jpg'
 heroImageAlt: man standing by himself
 title: Why the world needs another dating app
 date: 2019-01-26T22:07:15.359Z
