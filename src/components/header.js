@@ -8,11 +8,15 @@ import { media } from '../utils/theme';
 
 const PrimaryNavContainer = styled.div`
   a {
-    color: ${props => (
-        props.scrolled ? props.theme.defaultFontColor : props.theme.white
-      )};
+    color: ${props =>
+      props.scrolled ? props.theme.defaultFontColor : props.theme.white};
     text-decoration: none;
     font-size: 1.1rem;
+
+    ${media.forSmallOnly`
+
+    font-size: 14px;
+  `};
   }
 `;
 
@@ -63,7 +67,8 @@ const GetStartedButton = styled.button`
   ${media.forSmallOnly`
     height: 30px;
     font-size: 14px;
-    width: 130px;
+    width: 110px;
+    margin-left: .5rem;
   `};
 
   &:before {
@@ -93,7 +98,7 @@ const HeaderImage = styled(Link)`
   width: 220px;
 
   ${media.forSmallOnly`
-    width: 150px;
+    width: 125px;
     display: flex;
     align-items: center;
     justify-content: center;
