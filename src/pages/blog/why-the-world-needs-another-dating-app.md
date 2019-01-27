@@ -14,6 +14,10 @@ Making conversation through a text message is risky. Trying to agree on a fun da
 
 youtube hx7QS7cyqLo
 
+
+
+vimeo 311800634
+
 We believe shared experiences are the core of strong relationships. In a perfect world you could choose a date, and someone would show up with no hesitations, ready to share your excitement! Instead, most app-generated dates these days go like this: 
 
 * You spend 3-5 days in digital conversations, which normally consists of a few baseline question and answer sessions, along with a brief trade of generically funny memes. 
