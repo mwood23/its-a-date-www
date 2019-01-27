@@ -1,5 +1,7 @@
 ---
 templateKey: blog-post
+Hero Image: >-
+  https://res.cloudinary.com/itsadateapp/image/upload/v1548615462/dx6qqdicx8vbqwxcymub.png
 title: Why the world needs another dating app
 date: 2019-01-26T22:07:15.359Z
 author: Marcus Wood
