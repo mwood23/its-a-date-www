@@ -20,7 +20,7 @@ We believe shared experiences are the core of strong relationships. In a perfect
 * You talk about work, your friends, and even some shared hobbies. You end the night on good terms – maybe you’ll go out again, maybe you won’t – but overall, you’re tired and hungry and ready to get back on the app to start messaging a new match. Que a repeat cycle. 
 
 <div style="overflow: hidden;padding-bottom: 56.25%;position: relative;height: 0;"><iframe src="https://player.vimeo.com/video/311800634" style="left: 0;top: 0;height: 100%;width: 100%;
-    position: absolute;" width="853" height="505" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+      position: absolute;" width="853" height="505" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 
 Does this sound familiar? We think we have created a perfect world solution for this nasty cycle. What better way to jump into the dating scene than through a platform that allows you to take control of your dating life? You set the details of your date, and immediately start matching with others interested in the same activities. You choose activities that sound fun to you, and you choose a person to share that date with from a group of interested matches.  So now, your dates go more like this:
 
