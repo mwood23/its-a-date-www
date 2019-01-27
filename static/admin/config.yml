@@ -37,6 +37,7 @@ collections:
           widget: image,
           media_library: { output_filename_only: false },
         }
+      - { label: 'Hero Image Alt', name: 'heroImageAlt', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - {

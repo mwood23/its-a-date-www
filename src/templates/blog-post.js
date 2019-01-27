@@ -50,6 +50,8 @@ const AuthorBlock = ({ author }) => {
   );
 };
 
+const HeroImage = styled.img``;
+
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -57,7 +59,9 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
-  author
+  author,
+  heroImage,
+  heroImageAlt
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -66,6 +70,12 @@ export const BlogPostTemplate = ({
       {helmet || ''}
       <h1>{title}</h1>
       {author ? <AuthorBlock author={author} /> : null}
+      {heroImage ? (
+        <HeroImage
+          src={heroImage}
+          alt={heroImageAlt ? heroImageAlt : 'hero image for blog post'}
+        />
+      ) : null}
 
       <PostContent content={content} />
       {/* {tags && tags.length ? (
@@ -117,6 +127,8 @@ const BlogPost = ({ data }) => {
             tags={post.frontmatter.tags}
             title={post.frontmatter.title}
             author={post.frontmatter.author}
+            heroImage={post.frontmatter.heroImage}
+            heroImageAlt={post.frontmatter.heroImageAlt}
           />
         </Container>
       </PageWrapper>
@@ -143,6 +155,8 @@ export const pageQuery = graphql`
         title
         description
         tags
+        heroImage
+        heroImageAlt
         author {
           id
           about
