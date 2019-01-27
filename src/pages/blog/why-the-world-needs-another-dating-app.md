@@ -1,5 +1,7 @@
 ---
 templateKey: blog-post
+Hero Image: >-
+  https://res.cloudinary.com/itsadateapp/image/upload/v1548615462/dx6qqdicx8vbqwxcymub.png
 title: Why the world needs another dating app
 date: 2019-01-26T22:07:15.359Z
 author: Marcus Wood
@@ -10,7 +12,13 @@ tags:
 ---
 ![happy couple in Washington DC](/img/hero2-1-.jpg)
 
+![](https://res.cloudinary.com/itsadateapp/image/upload/v1548615512/hero2-1-.jpg)
+
 Making conversation through a text message is risky. Trying to agree on a fun date is complicated. Dating in general can be hard. We get that. So, we’re here to take the dating app world to a new level, and to take any uncertainty out of your dating equation. 
+
+youtube hx7QS7cyqLo
+
+vimeo 311800634
 
 We believe shared experiences are the core of strong relationships. In a perfect world you could choose a date, and someone would show up with no hesitations, ready to share your excitement! Instead, most app-generated dates these days go like this: 
 
@@ -20,7 +28,7 @@ We believe shared experiences are the core of strong relationships. In a perfect
 * You talk about work, your friends, and even some shared hobbies. You end the night on good terms – maybe you’ll go out again, maybe you won’t – but overall, you’re tired and hungry and ready to get back on the app to start messaging a new match. Que a repeat cycle. 
 
 <div style="overflow: hidden;padding-bottom: 56.25%;position: relative;height: 0;"><iframe src="https://player.vimeo.com/video/311800634" style="left: 0;top: 0;height: 100%;width: 100%;
-    position: absolute;" width="853" height="505" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+      position: absolute;" width="853" height="505" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 
 Does this sound familiar? We think we have created a perfect world solution for this nasty cycle. What better way to jump into the dating scene than through a platform that allows you to take control of your dating life? You set the details of your date, and immediately start matching with others interested in the same activities. You choose activities that sound fun to you, and you choose a person to share that date with from a group of interested matches.  So now, your dates go more like this:
 
