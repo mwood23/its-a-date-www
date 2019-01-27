@@ -10,6 +10,7 @@ import {
   CallToActionFooter
 } from '../components/common';
 import styled from 'styled-components';
+import { media } from '../utils/theme';
 
 const AuthorBlockContainer = styled.div`
   display: flex;
@@ -50,7 +51,15 @@ const AuthorBlock = ({ author }) => {
   );
 };
 
-const HeroImage = styled.img``;
+const HeroImage = styled.img`
+  width: 100%;
+  object-fit: cover;
+  max-height: 600px;
+
+  ${media.forSmallOnly`
+    max-height: 400px;
+  `};
+`;
 
 export const BlogPostTemplate = ({
   content,
