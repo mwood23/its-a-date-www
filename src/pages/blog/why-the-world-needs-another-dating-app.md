@@ -12,8 +12,7 @@ tags:
 
 Making conversation through a text message is risky. Trying to agree on a fun date is complicated. Dating in general can be hard. We get that. So, we’re here to take the dating app world to a new level, and to take any uncertainty out of your dating equation. 
 
-<div style="overflow: hidden;padding-bottom: 56.25%;position: relative;height: 0;"><iframe src="https://player.vimeo.com/video/311800634" style="left: 0;top: 0;height: 100%;width: 100%;
-    position: absolute;" width="853" height="505" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+youtube hx7QS7cyqLo
 
 We believe shared experiences are the core of strong relationships. In a perfect world you could choose a date, and someone would show up with no hesitations, ready to share your excitement! Instead, most app-generated dates these days go like this: 
 
