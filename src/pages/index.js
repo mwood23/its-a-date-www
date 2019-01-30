@@ -1,5 +1,4 @@
 import React from 'react';
-import Hero from '../images/hero.jpg';
 import PowerImage from '../images/datesText.png';
 import styled from 'styled-components';
 import Layout from '../components/layout';
@@ -7,7 +6,7 @@ import Slider from 'react-slick';
 import Logo from '../images/itsADateHorizontalDark.png';
 import LogoStacked from '../images/itsADateLogoDark.png';
 import AppHome from '../images/appHome.png';
-import { CallToActionFooter } from '../components/common/callToAction';
+import { CallToActionFooter, SignUpForm } from '../components/common';
 import { media } from '../utils/theme';
 
 import Date1 from '../images/bubble3.png';
@@ -77,15 +76,61 @@ const Blurbs = [
 ];
 
 const HeroSection = styled.div`
-  background: url(${Hero}) no-repeat center center fixed;
+  background: url('https://res.cloudinary.com/itsadateapp/image/upload/q_auto:good/v1548817463/group-2.jpg')
+    no-repeat center center fixed;
   background-size: cover;
-  height: 80vh;
+  height: 90vh;
   width: 100%;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: ${props => props.theme.desktopHeaderHeight};
 
   ${media.forSmallOnly`
-    height: 95vh;
-    background: url(${Hero}) no-repeat 30% 0 fixed;
+    height: 100vh;
+    padding-top: ${props => props.theme.mobileHeaderHeight};
+    background: url('https://res.cloudinary.com/itsadateapp/image/upload/q_auto:good/v1548817463/group-2.jpg') no-repeat 30% 0 fixed;
+  `};
+`;
+
+const HeroContent = styled.div`
+  max-width: 1100px;
+  padding: 0 4rem;
+
+  h1 {
+    color: white;
+    font-weight: 600;
+    font-size: 48px;
+    text-align: center;
+  }
+
+  p {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  ${media.forSmallMediumOnly`
+    h1 {
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  `};
+
+  ${media.forSmallOnly`
+  padding: 0 2rem;
+
+  h1 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 18px;
+    }
   `};
 `;
 
@@ -114,31 +159,33 @@ const ResponsiveVideo = styled.div`
   }
 `;
 
-const PowerStatementTop = styled.p`
-  color: white;
-  font-size: 48px;
-  text-align: center;
-  margin: 3rem 0;
+// const PowerStatementTop = styled.p`
+//   color: white;
+//   font-size: 48px;
+//   text-align: center;
+//   margin: 3rem 0;
 
-  ${media.forSmallMediumOnly`
-    font-size: 42px;
-  `};
+//   ${media.forSmallMediumOnly`
+//     font-size: 42px;
+//   `};
 
-  ${media.forSmallOnly`
-    font-size: 36px;
-  `};
-`;
+//   ${media.forSmallOnly`
+//     font-size: 36px;
+//   `};
+// `;
 
 const PowerStatementImage = styled.img`
   object-fit: cover;
   display: block;
-  margin: 0 auto;
+  margin: 3rem auto 6rem;
 
   ${media.forSmallMediumOnly`
     width: 50%;
+    margin: 2rem auto 3rem;
   `};
 
   ${media.forSmallOnly`
+    margin: 1.5em auto 2rem;
     width: 70%;
   `};
 `;
@@ -527,7 +574,14 @@ const AppShowcase = () => {
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <HeroSection />
+      <HeroSection>
+        <HeroContent>
+          <h1>The dating app that actually involves</h1>
+          <PowerStatementImage src={PowerImage} alt="dates" />
+          <p>Register now for early access to the app and exclusive events.</p>
+          <SignUpForm />
+        </HeroContent>
+      </HeroSection>
       <PowerStatementSection>
         <div style={{ margin: '0 auto', maxWidth: '800px' }}>
           <ResponsiveVideo>
@@ -541,10 +595,6 @@ const IndexPage = ({ data }) => {
             />
           </ResponsiveVideo>
         </div>
-        <PowerStatementTop>
-          The dating app that actually involves
-        </PowerStatementTop>
-        <PowerStatementImage src={PowerImage} alt="dates" />
       </PowerStatementSection>
       <DateSlider />
       <IconBlurbSection />
