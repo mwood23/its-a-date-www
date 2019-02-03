@@ -48,7 +48,7 @@ snaptr('track', 'PAGE_VIEW');
   `
             }}
           />
-          <script
+          {/* <script
             dangerouslySetInnerHTML={{
               __html: `
               !function() {
@@ -75,7 +75,7 @@ snaptr('track', 'PAGE_VIEW');
               drift.load('fdwszrw5p5et');
   `
             }}
-          />
+          /> */}
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>

@@ -6,7 +6,7 @@ import Slider from 'react-slick';
 import Logo from '../images/itsADateHorizontalDark.png';
 import LogoStacked from '../images/itsADateLogoDark.png';
 import AppHome from '../images/appHome.png';
-import { CallToActionFooter, SignUpForm } from '../components/common';
+import { CallToActionFooter } from '../components/common';
 import { media } from '../utils/theme';
 
 import Date1 from '../images/bubble3.png';
@@ -18,6 +18,8 @@ import Date5 from '../images/bubble5.png';
 import IconBlurb1 from '../images/iconBlurb1.png';
 import IconBlurb2 from '../images/iconBlurb2.png';
 import IconBlurb3 from '../images/iconBlurb3.png';
+
+import AppStoreDownload from '../images/appstore.png';
 
 const SLIDES = [
   {
@@ -97,6 +99,9 @@ const HeroSection = styled.div`
 const HeroContent = styled.div`
   max-width: 1100px;
   padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   h1 {
     color: white;
@@ -108,6 +113,10 @@ const HeroContent = styled.div`
   p {
     color: white;
     font-size: 24px;
+    text-align: center;
+  }
+
+  a {
     text-align: center;
   }
 
@@ -571,6 +580,10 @@ const AppShowcase = () => {
   );
 };
 
+const DownloadImage = styled.img`
+  width: 180px;
+`;
+
 const IndexPage = ({ data }) => {
   return (
     <Layout>
@@ -578,8 +591,14 @@ const IndexPage = ({ data }) => {
         <HeroContent>
           <h1>The dating app that actually involves</h1>
           <PowerStatementImage src={PowerImage} alt="dates" />
-          <p>Register now for early access to the app and exclusive events.</p>
-          <SignUpForm />
+          <p>Now available in Washington, D.C. and Northern Virginia!</p>
+          <a
+            href="https://itunes.apple.com/us/app/its-a-date-activity-dating/id1432859426?mt=8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <DownloadImage src={AppStoreDownload} alt="Download It's a Date" />
+          </a>
         </HeroContent>
       </HeroSection>
       <PowerStatementSection>
