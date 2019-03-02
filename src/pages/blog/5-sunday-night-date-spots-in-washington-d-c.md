@@ -11,11 +11,6 @@ description: Beat out the Sunday Scaries at some low key spots around Washington
 tags:
   - '#blog'
 ---
-**By: Michael Bollman**
-
-​![](https://res.cloudinary.com/itsadateapp/image/upload/v1551291967/apartment-bed-carpet-269141.jpg)
-​
-
 You’ve watched enough movies this weekend to recover some, but not fully. You’re up for a little fun this fine Sunday afternoon, but don’t want to start the week feeling like the walking dead. We have you covered! Check out these mellow spots to treat yourself before a long week.
 
 **5. Brunch at Le Diplomate**
