@@ -17,6 +17,7 @@ const BlogItem = styled.div`
 const BlogItemContainer = styled.div`
   display: flex;
   box-shadow: 0 1px 8px 0 rgba(186, 186, 186, 0.5);
+  margin-bottom: 1.5rem;
 
   ${media.forSmallOnly`
     flex-direction: column;
