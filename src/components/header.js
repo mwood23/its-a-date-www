@@ -148,15 +148,13 @@ class Header extends React.Component {
       typeof window !== 'undefined' && window.location.pathname !== '/';
     const scrolledStyle = this.state.scrolled || onSecondaryPage;
 
-    console.log('secondary page', onSecondaryPage);
-
     return (
       <HeaderWrapper scrolled={scrolledStyle}>
         <HeaderImage to="/">
           {scrolledStyle ? (
-            <img src={Logo} alt="It's a Date logo" />
-          ) : (
             <img src={LogoDark} alt="It's a Date logo" />
+          ) : (
+            <img src={Logo} alt="It's a Date logo" />
           )}
         </HeaderImage>
         {onSecondaryPage ? (
