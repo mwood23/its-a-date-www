@@ -11,6 +11,11 @@ import { theme } from '../utils/theme';
 
 const ContentWrapper = styled.div``;
 
+/**
+ * There's a nasty bug in Gatsby that I can't really identify. Essentially, the components mount before all
+ * of the styles are loaded on an empty cache and cause the scroll bar to operate odd. Also, the header doesn't
+ * update as expected from state changes. Forcing a remount after render is the only thing that fixed the issue.
+ */
 class Layout extends React.Component {
   state = {
     key: 1
