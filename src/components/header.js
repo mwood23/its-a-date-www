@@ -126,6 +126,7 @@ class Header extends React.Component {
 
   onWindowScroll = () => {
     const scrolled = window.scrollY > 200;
+    console.log('on scroll', scrolled)
 
     if (scrolled !== this.state.scrolled) {
       this.setState({ scrolled });
@@ -144,6 +145,8 @@ class Header extends React.Component {
     let logo = Logo;
     const onSecondaryPage =
       typeof window !== 'undefined' && window.location.pathname !== '/';
+
+      console.log('secondary page', onSecondaryPage)
     if (this.state.scrolled || onSecondaryPage) {
       logo = LogoDark;
     }
