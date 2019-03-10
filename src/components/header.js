@@ -136,8 +136,6 @@ class Header extends React.Component {
 
   componentDidMount() {
     document.addEventListener('scroll', this.onWindowScroll);
-
-    this.forceUpdate();
   }
 
   componentWillUnmount() {
