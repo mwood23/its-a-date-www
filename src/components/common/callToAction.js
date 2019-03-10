@@ -159,9 +159,9 @@ export class CallToActionFooter extends React.Component {
     return (
       <CallToActionContainer>
         <CallToActionWrapper>
-          <CTAPowerStatement>Who will you meet?</CTAPowerStatement>
+          <CTAPowerStatement>Not in your area?</CTAPowerStatement>
           <CTAText>
-            Join our waitlist! More access slots will be available soon.
+            Join our mailing list! We're expanding to other cities soon.
           </CTAText>
           <SignUpForm />
         </CallToActionWrapper>

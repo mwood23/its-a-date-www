@@ -109,7 +109,7 @@ export class SignUpForm extends React.Component {
             </div>
             <CTASubmit
               type="submit"
-              value="Get Early Access"
+              value="Subscribe"
               name="subscribe"
               id="mc-embedded-subscribe"
             />

@@ -114,8 +114,6 @@ BlogPostTemplate.propTypes = {
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
 
-  console.log(post);
-
   return (
     <Layout>
       <PageWrapper style={{ marginTop: '3rem' }}>

@@ -19,7 +19,8 @@ import IconBlurb1 from '../images/iconBlurb1.png';
 import IconBlurb2 from '../images/iconBlurb2.png';
 import IconBlurb3 from '../images/iconBlurb3.png';
 
-import AppStoreDownload from '../images/appstore.png';
+import AppStoreDownload from '../images/appStore.svg';
+import GooglePlayDownload from '../images/googlePlay.png';
 
 const SLIDES = [
   {
@@ -118,6 +119,21 @@ const HeroContent = styled.div`
 
   a {
     text-align: center;
+    &:first-child {
+      margin-right: 0.5rem;
+    }
+    &:last-child {
+      margin-left: 0.5rem;
+    }
+
+    ${media.forSmallOnly`
+    &:first-child {
+      margin-right: 0;
+    }
+    &:last-child {
+      margin-left: 0;
+    }
+  `};
   }
 
   ${media.forSmallMediumOnly`
@@ -140,6 +156,15 @@ const HeroContent = styled.div`
     p {
       font-size: 18px;
     }
+  `};
+`;
+
+const DownloadContainer = styled.div`
+  display: flex;
+  margin: 0 auto;
+
+  ${media.forSmallOnly`
+  flex-direction: column;
   `};
 `;
 
@@ -569,10 +594,10 @@ const AppShowcase = () => {
             exclusive events.
           </AppShowcaseLine2>
 
-          <AccessRegistrationContainer>
+          {/* <AccessRegistrationContainer>
             <FillBar />
             <FillBarText>Pre-access registration is full</FillBarText>
-          </AccessRegistrationContainer>
+          </AccessRegistrationContainer> */}
         </AppDetails>
         <AppImage src={AppHome} />
       </AppShowcaseWrapper>
@@ -582,6 +607,16 @@ const AppShowcase = () => {
 
 const DownloadImage = styled.img`
   width: 180px;
+  height: 58px;
+
+  ${media.forSmallOnly`
+    &:first-child {
+      margin-right: 0;
+    }
+    &:last-child {
+      margin-left: 0;
+    }
+  `};
 `;
 
 const IndexPage = ({ data }) => {
@@ -592,13 +627,28 @@ const IndexPage = ({ data }) => {
           <h1>The dating app that actually involves</h1>
           <PowerStatementImage src={PowerImage} alt="dates" />
           <p>Now available in Washington, D.C. and Northern Virginia!</p>
-          <a
-            href="https://itunes.apple.com/us/app/its-a-date-activity-dating/id1432859426?mt=8"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <DownloadImage src={AppStoreDownload} alt="Download It's a Date" />
-          </a>
+          <DownloadContainer>
+            <a
+              href="https://itunes.apple.com/us/app/its-a-date-activity-dating/id1432859426?mt=8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <DownloadImage
+                src={AppStoreDownload}
+                alt="Download It's a Date"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=app.itsadate.itsadate"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <DownloadImage
+                src={GooglePlayDownload}
+                alt="Download It's a Date"
+              />
+            </a>
+          </DownloadContainer>
         </HeroContent>
       </HeroSection>
       <PowerStatementSection>

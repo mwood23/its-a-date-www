@@ -1,11 +1,24 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const BlogPostContentWrapper = styled.div`
+
+p {
+  > img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+`
 
 export const HTMLContent = ({ content, className }) => (
-  <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
+  <BlogPostContentWrapper className={className} dangerouslySetInnerHTML={{ __html: content }} />
 )
 
 const Content = ({ content, className }) => (
-  <div className={className}>{content}</div>
+  <BlogPostContentWrapper className={className}>{content}</BlogPostContentWrapper>
 )
 
 HTMLContent.propTypes = Content.propTypes

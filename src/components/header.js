@@ -124,14 +124,20 @@ class Header extends React.Component {
     };
   }
 
-  componentDidMount() {
-    document.addEventListener('scroll', () => {
-      const scrolled = window.scrollY > 200;
+  onWindowScroll = () => {
+    const scrolled = window.scrollY > 200;
 
-      if (scrolled !== this.state.scrolled) {
-        this.setState({ scrolled });
-      }
-    });
+    if (scrolled !== this.state.scrolled) {
+      this.setState({ scrolled });
+    }
+  }
+
+  componentDidMount() {
+    document.addEventListener('scroll', this.onWindowScroll);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this.onWindowScroll);
   }
 
   render() {

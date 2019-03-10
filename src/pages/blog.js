@@ -72,6 +72,7 @@ const Blog = ({ data }) => {
             return (
               <Link
                 to={post.node.fields.slug}
+                key={post.node.fields.slug}
                 style={{ textDecoration: 'none' }}
               >
                 <BlogItemContainer>
