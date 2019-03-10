@@ -128,7 +128,6 @@ class Header extends React.Component {
 
   onWindowScroll = () => {
     const scrolled = window.scrollY > 200;
-    console.log('on scroll', scrolled);
 
     if (scrolled !== this.state.scrolled) {
       this.setState({ scrolled });
@@ -137,6 +136,8 @@ class Header extends React.Component {
 
   componentDidMount() {
     document.addEventListener('scroll', this.onWindowScroll);
+
+    this.forceUpdate();
   }
 
   componentWillUnmount() {
@@ -144,7 +145,9 @@ class Header extends React.Component {
   }
 
   render() {
-    const onSecondaryPage = this.props.secondaryPage
+    const onSecondaryPage =
+      typeof window !== 'undefined' && window.location.pathname !== '/';
+
     const scrolledStyle = this.state.scrolled || onSecondaryPage;
 
     return (
