@@ -144,8 +144,7 @@ class Header extends React.Component {
   }
 
   render() {
-    const onSecondaryPage =
-      typeof window !== 'undefined' && window.location.pathname !== '/';
+    const onSecondaryPage = this.props.secondaryPage
     const scrolledStyle = this.state.scrolled || onSecondaryPage;
 
     return (
