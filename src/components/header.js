@@ -31,8 +31,10 @@ const PrimaryNav = ({ scrolled }) => {
 const HeaderWrapper = styled.div`
   height: ${props => props.theme.desktopHeaderHeight};
   background: ${props => (props.scrolled ? props.theme.white : 'transparent')};
-  box-shadow: ${props => console.log(props.scrolled) ||
-    props.scrolled ? '0 2px 4px 0 rgba(186, 186, 186, 0.5)' : 'none'};
+  box-shadow: ${props =>
+    console.log(props.scrolled) || props.scrolled
+      ? '0 2px 4px 0 rgba(186, 186, 186, 0.5)'
+      : 'none'};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -126,12 +128,12 @@ class Header extends React.Component {
 
   onWindowScroll = () => {
     const scrolled = window.scrollY > 200;
-    console.log('on scroll', scrolled)
+    console.log('on scroll', scrolled);
 
     if (scrolled !== this.state.scrolled) {
       this.setState({ scrolled });
     }
-  }
+  };
 
   componentDidMount() {
     document.addEventListener('scroll', this.onWindowScroll);
@@ -142,20 +144,20 @@ class Header extends React.Component {
   }
 
   render() {
-    let logo = Logo;
     const onSecondaryPage =
       typeof window !== 'undefined' && window.location.pathname !== '/';
-      const scrolledStyle = this.state.scrolled || onSecondaryPage;
+    const scrolledStyle = this.state.scrolled || onSecondaryPage;
 
-      console.log('secondary page', onSecondaryPage)
-    if (scrolledStyle) {
-      logo = LogoDark;
-    }
+    console.log('secondary page', onSecondaryPage);
 
     return (
       <HeaderWrapper scrolled={scrolledStyle}>
         <HeaderImage to="/">
-          <img src={logo} alt="It's a Date logo" />
+          {scrolledStyle ? (
+            <img src={Logo} alt="It's a Date logo" />
+          ) : (
+            <img src={LogoDark} alt="It's a Date logo" />
+          )}
         </HeaderImage>
         {onSecondaryPage ? (
           <PrimaryNav scrolled={scrolledStyle} />
