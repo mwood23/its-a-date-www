@@ -38,8 +38,9 @@ const Layout = ({ children }) => (
           >
             <html lang="en" />
           </Helmet>
-          { typeof window !== 'undefined' && window.location.pathname !== '/' ? <Header siteTitle={data.site.siteMetadata.title} /> : <Header siteTitle={data.site.siteMetadata.title} secondaryPage /> }
-          
+          {/* Placing here because for some reason the header does render correctly on an empty cache */}
+          { typeof window !== 'undefined' && window.location.pathname !== '/' ? <Header siteTitle={data.site.siteMetadata.title} secondaryPage /> : <Header siteTitle={data.site.siteMetadata.title} /> }
+
           <ContentWrapper>{children}</ContentWrapper>
         </Fragment>
       </ThemeProvider>
