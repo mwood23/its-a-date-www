@@ -1,8 +1,8 @@
 ---
 templateKey: blog-post
 heroImage: >-
-  https://res.cloudinary.com/itsadateapp/image/upload/v1552551925/shamrock_fest.jpg
-heroImageAlt: 'https://i.axs.com/2015/02/promoted-media_54ece967b43f8.jpg'
+  https://res.cloudinary.com/itsadateapp/image/upload/v1552551873/800px-Green_Fountain_at_White_House_on_St_Patricks_Day__2009.jpg
+heroImageAlt: White house with green water fountain
 title: Celebrate St. Patrick's Day in Washington D.C.
 date: 2019-03-14T08:23:23.932Z
 author: Michael Bollman
@@ -10,8 +10,6 @@ description: Celebrate the Emerald Isle's rich history in our nation's capital.
 tags:
   - '#Blog #StPaddysDay'
 ---
-![](https://res.cloudinary.com/itsadateapp/image/upload/v1552551873/800px-Green_Fountain_at_White_House_on_St_Patricks_Day__2009.jpg)
-
 ​You could weather out the cold in front of season of yet another season of American Idol, or get out and celebrate St. Patrick's day in Washington D.C. Let us show you a few spots to rock that sparkly, emerald-green outfit and celebrate your  honorary Irish heritage across our nation's capital. Unfortunately, the annual St. Paddy's Day parade has been cancelled due to "rising security costs", but there are plenty of places to celebrate the day with goofily clad friends.
 
 ## ShamrockFest 2019 at RFK Stadium
@@ -37,8 +35,6 @@ The Dubliner opens bright and early at 9:00 AM on St. Patrick's Day. Listen to l
 ![](https://res.cloudinary.com/itsadateapp/image/upload/v1552554059/shamrockpic-5a9043ce875db90036cbe969.jpg)
 
 There are countless pub crawls on the weekend of St. Patrick's Day and the weekend of the 23rd. Look up St. Patrick's Day pub crawls in D.C. and the options are endless. Shown above is The Shamrock Crawl, a run of Dupont Circle Bars battening down the hatches for a horde of festive Irish folk revelling in the spirit of the day.
-
-
 
 Photo Credits: 
 
